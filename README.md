@@ -1,46 +1,57 @@
-# Hello World
+# Atbash Cipher
 
-Welcome to Hello World on Exercism's Python Track.
+Welcome to Atbash Cipher on Exercism's Python Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 
 ## Instructions
 
-The classical introductory exercise.
-Just say "Hello, World!".
+Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.
 
-["Hello, World!"][hello-world] is the traditional first program for beginning programming in a new language or environment.
+The Atbash cipher is a simple substitution cipher that relies on transposing all the letters in the alphabet such that the resulting alphabet is backwards.
+The first letter is replaced with the last letter, the second with the second-last, and so on.
 
-The objectives are simple:
+An Atbash cipher for the Latin alphabet would be as follows:
 
-- Modify the provided code so that it produces the string "Hello, World!".
-- Run the test suite and make sure that it succeeds.
-- Submit your solution and check it at the website.
+```text
+Plain:  abcdefghijklmnopqrstuvwxyz
+Cipher: zyxwvutsrqponmlkjihgfedcba
+```
 
-If everything goes well, you will be ready to fetch your first real exercise.
+It is a very weak cipher because it only has one possible key, and it is a simple mono-alphabetic substitution cipher.
+However, this may not have been an issue in the cipher's time.
 
-[hello-world]: https://en.wikipedia.org/wiki/%22Hello,_world!%22_program
+Ciphertext is written out in groups of fixed length, the traditional group size being 5 letters, leaving numbers unchanged, and punctuation is excluded.
+This is to make it harder to guess things based on word boundaries.
+All text will be encoded as lowercase letters.
+
+## Examples
+
+- Encoding `test` gives `gvhg`
+- Encoding `x123 yes` gives `c123b vh`
+- Decoding `gvhg` gives `test`
+- Decoding `gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt` gives `thequickbrownfoxjumpsoverthelazydog`
 
 ## Source
 
 ### Created by
 
-- @michaelem
+- @betegelse
 
 ### Contributed to by
 
 - @behrtam
 - @cmccandless
 - @Dog
-- @hebertjulio
 - @ikhadykin
+- @jgomo3
 - @kytrinyx
 - @N-Parsons
-- @NobbZ
+- @parinporecha
 - @pheanex
-- @skeskali
-- @Sukhj1nder
+- @sjakobi
+- @thomasjpfan
 - @tqa236
 
 ### Based on
 
-This is an exercise to introduce users to using Exercism - https://en.wikipedia.org/wiki/%22Hello,_world!%22_program
+Wikipedia - https://en.wikipedia.org/wiki/Atbash
